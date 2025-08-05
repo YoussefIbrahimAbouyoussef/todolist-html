@@ -9,6 +9,7 @@ h1 {
   width: 100%;
 }
 .search-bar {
+  width: auto;
   height: 100%;
   width: 100%;
   border-style: solid;
