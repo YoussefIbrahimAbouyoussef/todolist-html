@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="TODO">
+      <h1>TODO LIST</h1>
+      <div class="control">
+        <div class="search-image">
+          <input
+            id="1"
+            type="text"
+            placeholder=" Search note..."
+            class="search-bar"
+          />
+          <img src="Vector.svg" class="image" alt="Search-icon" />
+        </div>
+        <div class="dropdown">
+          <label for="Mydropbox"> </label>
+          <select id="Mydropbox">
+            <option value="Option1">ALL</option>
+            <option value="Option2">Complete</option>
+            <option value="Option3">Incomplete</option>
+          </select>
+        </div>
+        <div class="moon">
+          <img
+            class="switch-moon-img"
+            src="moon.svg"
+            alt="image of dark theme"
+          />
+        </div>
+      </div>
+      <button class="add" onclick="showPopup()">
+        <img src="plus2.svg" class="plus" alt="Add task " />
+      </button>
+      <ul id="todo-list"></ul>
+    </div>
+
+    <img src="Loading.svg" id="loading-img" class="loading" alt="Loading" />
+
+    <div id="popup" class="popup" style="display: none">
+      <div id="popup-title" style="font-weight: bold; margin-bottom: 10px">
+        NEW NOTE
+      </div>
+
+      <input
+        type="text"
+        id="popup-input"
+        placeholder=" Input your note..."
+        maxlength="100"
+      />
+
+      <div class="popup-btns">
+        <button id="cancel-btn" onclick="closePopup()">Cancel</button>
+        <button id="apply-btn" onclick="addTask()">Apply</button>
+      </div>
+    </div>
+
+    <div id="edit-popup" class="edit-popup-overlay" style="display: none">
+      <div class="edit-popup">
+        <h2>EDIT NOTE</h2>
+        <input type="text" id="edit-popup-input" placeholder="Edit your note" />
+        <div class="edit-popup-buttons">
+          <button id="edit-cancel-btn" class="cancel-btn">Cancel</button>
+          <button id="edit-save-btn" class="save-btn">Save</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
